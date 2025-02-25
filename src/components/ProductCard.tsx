@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
+import { useContext, FC } from "react";
 import { CartContext } from "../context/CartContext";
+import { Product } from "../types/cart";
 
-interface Props {
-  product: any;
-}
+type ProductCardProps = {
+  product: Product;
+};
 
-const ProductCard: React.FC<Props> = ({ product }) => {
+const ProductCard: FC<ProductCardProps> = ({ product }) => {
   const { cart, dispatch } = useContext(CartContext)!;
 
   const itemInCart = cart.find((item) => item.id === product.id);

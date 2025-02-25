@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import { useContext, FC } from "react";
 import { CartContext } from "../context/CartContext";
 
-const Cart: React.FC = () => {
+const Cart: FC = () => {
   const { cart, dispatch } = useContext(CartContext)!;
 
   const totalPrice = cart.reduce((acc, item) => {
     const discountedPrice =
       item.price - (item.discountPercentage * item.price) / 100;
-    return acc + discountedPrice * item.quantity;
+    return acc + discountedPrice * item.quantity!;
   }, 0);
 
   return (

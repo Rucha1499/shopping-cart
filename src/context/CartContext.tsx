@@ -1,11 +1,11 @@
 import React, { createContext, useReducer, useEffect, Dispatch } from "react";
 import { cartReducer, initialState } from "../reducers/cartReducer";
-// import { Product } from "../types";
+import { CartAction, Product } from "../types/cart";
 
-interface CartContextProps {
-  cart: any[];
-  dispatch: Dispatch<any>;
-}
+type CartContextProps = {
+  cart: Product[];
+  dispatch: Dispatch<CartAction>;
+};
 
 export const CartContext = createContext<CartContextProps | undefined>(
   undefined
