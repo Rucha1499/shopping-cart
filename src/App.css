@@ -1,0 +1,172 @@
+p {
+  margin: 0px 0px 8px 0px;
+}
+
+.shopping-cart {
+  display: flex;
+  flex-direction: column;
+  margin: 24px;
+  gap: 24px;
+}
+
+.navbar {
+  text-align: center;
+  padding: 24px;
+  border-bottom: 1px solid gray;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.product-card {
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-card img {
+  width: 100px;
+  object-fit: contain;
+}
+
+.price .original-price {
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.price {
+  color: grey;
+}
+
+.cart {
+  padding: 20px;
+}
+
+.cart-container {
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 425px) {
+  .cart-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-list {
+    justify-content: center;
+  }
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.cart-item-details {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.product-name {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-title-cart {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  display: block;
+  font-weight: 600;
+}
+
+.cart-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-controls button {
+  border-radius: 4px;
+  background-color: #c3b1e1;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-btn {
+  border: none;
+  border-radius: 4px;
+  background-color: #ff474d;
+  color: white;
+  cursor: pointer;
+  padding: 4px 8px;
+  width: max-content;
+}
+
+.add-to-cart {
+  border: none;
+  border-radius: 4px;
+  background-color: #c3b1e1;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.control-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.total-price {
+  font-weight: 600;
+}
+
+.total-price span {
+  color: darkslateblue;
+}
